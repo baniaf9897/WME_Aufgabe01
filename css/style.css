@@ -1,0 +1,9 @@
+#navigation{
+    list-style-type: none;
+    width: 100%;
+}
+#navigation li{
+    display:inline;
+    padding: 8px;
+    background-color: #dddddd;
+}
