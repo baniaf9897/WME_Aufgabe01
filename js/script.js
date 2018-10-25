@@ -105,3 +105,13 @@ function ausblendenInternet() {
         stateInternet = 0;
     }
 }
+    /**************** responsive navbar  ******************/
+
+    
+   //looking for the elements
+   let navbar = document.getElementById('navigation')
+   let toggle = document.getElementById('toggle')
+   // adding class "mobile" to navbar
+   toggle.addEventListener("click", function(){
+       navbar.classList.toggle('mobile')
+   })

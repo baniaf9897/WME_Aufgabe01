@@ -25,10 +25,7 @@ main{
 section{
     padding-top:50px;
 }
-article{
-    padding-left: 50px;
-    padding-right:50px;
-}
+
  #logo{
     background-image: url(../res/logo_active.png);
     background-size:cover;
@@ -57,6 +54,8 @@ nav{
     background: linear-gradient(to bottom, #eaeaea 0%,#c6c6c6 100%);
     padding-top:10px;
     padding-bottom:10px;
+    position:fixed;
+    width:100%;
 }
 
 nav ul{
@@ -70,14 +69,18 @@ nav ul li{
     border-width: 0 0.5px 0.5px 0.5px;
     border-style: solid;
     padding: 25px 16px;
-    color:dimgrey;
-    text-decoration: none;
-    
+   
 }
 nav ul li:hover{
     transition: background-color 0.4s ease-out;
     background-color: darkgrey;
-    color:dimgray;
+}
+.nav-link{
+    color:dimgrey;
+    text-decoration: none;
+}
+.nav-link:hover{
+    color:dimgrey;
     text-decoration: none;
 }
 #textbox{
@@ -89,7 +92,7 @@ nav ul li:hover{
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
     box-shadow: 0px 5px 5px grey;
-    column-count: 3;
+    column-count: 1;
 }
 #textbox:hover{
     transition: box-shadow 0.1s;
@@ -97,6 +100,12 @@ nav ul li:hover{
 }
 .mobile{
     display: block;
+}
+@media screen and (min-width: 1200px) {
+    main{
+        width:1170px;
+        margin: 0px auto;
+    }
 }
 @media screen and (min-width: 768px) {
     nav{
@@ -116,24 +125,18 @@ nav ul li:hover{
     #textbox{
         column-count: 3;
     }
-
+    article{
+        padding-left: 50px;
+        padding-right:50px;
+    }
 }
-
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 321px) {
     #textbox{
-        column-count: 2;
+        column-count: 3;
     }
     main{
         padding-left: 20px;
         padding-right: 20px;
     }
   }
-  @media screen and (max-width: 320px) {
-    #textbox{
-        column-count: 1;
-    }
-    main{
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-  }
+  
