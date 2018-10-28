@@ -42,7 +42,7 @@ section{
 }
 .toggle-switch{
     position:absolute;
-    top:10px;
+    top:30px;
     right:20px;
     color:dimgray;
     font-size: 30px;
@@ -93,6 +93,7 @@ nav ul li:hover{
     border-bottom-right-radius: 8px;
     box-shadow: 0px 5px 5px grey;
     column-count: 1;
+
 }
 #textbox:hover{
     transition: box-shadow 0.1s;
@@ -101,13 +102,16 @@ nav ul li:hover{
 .mobile{
     display: block;
 }
-@media screen and (min-width: 1200px) {
-    main{
-        width:1170px;
-        margin: 0px auto;
+@media screen and (min-width: 321px) {
+    #textbox{
+        column-count: 2;
     }
-}
-@media screen and (min-width: 768px) {
+    main{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+  }
+  @media screen and (min-width: 768px) {
     nav{
         display: flex;
         justify-content: left;
@@ -130,13 +134,11 @@ nav ul li:hover{
         padding-right:50px;
     }
 }
-@media screen and (min-width: 321px) {
-    #textbox{
-        column-count: 3;
-    }
-    main{
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-  }
+
   
+@media screen and (min-width: 1200px) {
+    main{
+        width:1170px;
+        margin: 0px auto;
+    }
+}
