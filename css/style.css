@@ -102,6 +102,10 @@ nav ul li:hover{
 .mobile{
     display: block;
 }
+#internetid, tr td:nth-child(7)		{ display:none; visibility:hidden; }
+#elecid, tr td:nth-child(6)		{ display:none; visibility:hidden; }
+#childsid, tr td:nth-child(5)		{ display:none; visibility:hidden; }
+
 @media screen and (min-width: 321px) {
     #textbox{
         column-count: 2;
@@ -110,6 +114,7 @@ nav ul li:hover{
         padding-left: 20px;
         padding-right: 20px;
     }
+    #childsid, tr td:nth-child(5)		{ display:table-cell; visibility:visible; }
   }
   @media screen and (min-width: 768px) {
     nav{
@@ -133,7 +138,7 @@ nav ul li:hover{
         padding-left: 50px;
         padding-right:50px;
     }
-
+      #elecid, tr td:nth-child(6)		{ display:table-cell; visibility:visible; }
 }
 
   
@@ -142,6 +147,7 @@ nav ul li:hover{
         width:1170px;
         margin: 0px auto;
     }
+    #internetid, tr td:nth-child(7)		{ display:table-cell; visibility:visible; }
 }
 
 table {
@@ -159,14 +165,4 @@ th, td {
 
 tr:nth-child(even) {
     background-color: #d8d8d8
-}
-
-@media only screen and (max-width: 768px) {
-    #internetid, tr td:nth-child(7)		{ display:none; visibility:hidden; }
-}
-
-@media only screen and (max-width: 321px) {
-    #internetid, tr td:nth-child(7)		{ display:none; visibility:hidden; }
-    #elecid, tr td:nth-child(6)		{ display:none; visibility:hidden; }
-    #childsid, tr td:nth-child(5)		{ display:none; visibility:hidden; }
 }
