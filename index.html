@@ -44,24 +44,26 @@
                 </article>
             </section>
             <section>            
-                <a>Show/Hide: </a>
-                <a onclick="ausblendenBirth()" href="#">birth rate/1000</a>
-                <a onclick="ausblendenPhone()" href="#">cellphones/100</a>
-                <a onclick="ausblendenChild()" href="#">children/women</a>
-                <a onclick="ausblendenElec()" href="#">electric usage</a>
-                <a onclick="ausblendenInternet()" href="#">internet usage</a>
-                <a onclick="sortUp(1)" href="#">SortierenUp</a>
-                <a onclick="sortDown(1)" href="#">SortierenDown</a>
+                Show/Hide:
+                <a onclick="ausblendenBirth()" href="#">birth rate/1000 </a>
+                 |
+                <a onclick="ausblendenPhone()" href="#">cellphones/100 </a>
+                 |
+                <a onclick="ausblendenChild()" href="#">children/women </a>
+                 |
+                <a onclick="ausblendenElec()" href="#">electric usage </a>
+                 |
+                <a onclick="ausblendenInternet()" href="#">internet usage </a>
             <table id="table">
                 <thead>
                     <tr>
                         <th class="id" id="id">ID</th>
-                        <th class="country">Country</th>
-                        <th class="birth">birth rate /1000</th>
-                        <th class="phones">cellphones /100</th>
-                        <th class="childs">children / women</th>
-                        <th class="electric">electric usage</th>
-                        <th class="internet">internet usage</th>
+                        <th class="country" id="countryid">Country <a onclick="sortUp(1)" href="#"><i class="fas fa-chevron-up"></i></a><a onclick="sortDown(1)" href="#"><i class="fas fa-chevron-down"></i></a></th>
+                        <th class="birth" id="birthid">birth rate /1000</th>
+                        <th class="phones" id="phonesid">cellphones /100</th>
+                        <th class="childs" id="childsid">children / women</th>
+                        <th class="electric" id="elecid">electric usage</th>
+                        <th class="internet" id="internetid">internet usage</th>
                     </tr>
                 </thead>
                 <tbody>

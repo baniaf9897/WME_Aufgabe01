@@ -20,7 +20,7 @@ function ausblendenBirth() {
         for(var i = 0; i != elements.length; ++i)
         {
             elements[i].style.visibility= "visible";
-            elements[i].style.display = "initial";
+            elements[i].style.display = "table-cell";
         }
         stateBirth = 0;
     }
@@ -60,7 +60,7 @@ function ausblendenChild() {
         for(var i = 0; i != elements.length; ++i)
         {
             elements[i].style.visibility= "visible";
-            elements[i].style.display = "initial";
+            elements[i].style.display = "table-cell";
         }
         stateChild = 0;
     }
@@ -80,7 +80,7 @@ function ausblendenElec() {
         for(var i = 0; i != elements.length; ++i)
         {
             elements[i].style.visibility= "visible";
-            elements[i].style.display = "initial";
+            elements[i].style.display = "table-cell";
         }
         stateElec = 0;
     }
@@ -100,7 +100,7 @@ function ausblendenInternet() {
         for(var i = 0; i != elements.length; ++i)
         {
             elements[i].style.visibility= "visible";
-            elements[i].style.display = "initial";
+            elements[i].style.display = "table-cell";
         }
         stateInternet = 0;
     }

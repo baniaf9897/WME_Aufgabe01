@@ -133,6 +133,7 @@ nav ul li:hover{
         padding-left: 50px;
         padding-right:50px;
     }
+
 }
 
   
@@ -149,9 +150,7 @@ table {
     border: 1px solid #ddd;
 }
 
-th {
-    cursor: pointer;
-}
+table thead th { border-bottom: 1px solid #000; }
 
 th, td {
     text-align: left;
@@ -159,5 +158,15 @@ th, td {
 }
 
 tr:nth-child(even) {
-    background-color: #f2f2f2
+    background-color: #d8d8d8
+}
+
+@media only screen and (max-width: 768px) {
+    #internetid, tr td:nth-child(7)		{ display:none; visibility:hidden; }
+}
+
+@media only screen and (max-width: 321px) {
+    #internetid, tr td:nth-child(7)		{ display:none; visibility:hidden; }
+    #elecid, tr td:nth-child(6)		{ display:none; visibility:hidden; }
+    #childsid, tr td:nth-child(5)		{ display:none; visibility:hidden; }
 }
