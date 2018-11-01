@@ -40,7 +40,7 @@ function ausblendenPhone() {
         for(var i = 0; i != elements.length; ++i)
         {
             elements[i].style.visibility= "visible";
-            elements[i].style.display = "initial";
+            elements[i].style.display = "table-cell";
         }
         statePhone = 0;
     }

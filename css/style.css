@@ -25,6 +25,11 @@ main{
 section{
     padding-top:50px;
 }
+hr{
+    border:solid;
+    border-color: #68d199;
+    border-width: 1px;
+}
 
  #logo{
     background-image: url(../res/logo_active.png);
@@ -86,7 +91,7 @@ nav ul li:hover{
 #textbox{
     padding:50px;
     border-color: darkgray;
-    border-top-color: aquamarine;
+    border-top-color: #68d199;
     border-width: 2px;
     border-style: solid; 
     border-bottom-left-radius: 8px;
@@ -102,6 +107,19 @@ nav ul li:hover{
 .mobile{
     display: block;
 }
+footer{
+    padding-bottom: 50px;
+    display:grid;
+    grid-template-rows:100%;
+}
+.footer-container-left{
+    justify-self: left;
+}
+.footer-container-right{
+    justify-self: right;
+    text-align:end;
+}
+
 #internetid, tr td:nth-child(7)		{ display:none; visibility:hidden; }
 #elecid, tr td:nth-child(6)		{ display:none; visibility:hidden; }
 #childsid, tr td:nth-child(5)		{ display:none; visibility:hidden; }
