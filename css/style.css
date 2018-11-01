@@ -108,16 +108,15 @@ nav ul li:hover{
     display: block;
 }
 footer{
-    padding-bottom: 50px;
-    display:grid;
-    grid-template-rows:100%;
+    padding-bottom: 100px;
+    
 }
-.footer-container-left{
-    justify-self: left;
+#footer-container-left{
+    float:left;
 }
-.footer-container-right{
-    justify-self: right;
-    text-align:end;
+#footer-container-right{
+    float:right;
+    text-align:right;  
 }
 
 #internetid, tr td:nth-child(7)		{ display:none; visibility:hidden; }
