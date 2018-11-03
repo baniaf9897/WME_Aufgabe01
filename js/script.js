@@ -5,7 +5,9 @@ var stateChild=0;
 var stateElec=0;
 var stateInternet=0;
 
+//Funktionen zum ein- und ausblenden
 function ausblendenBirth() {
+    //ausblenden: suchen nach Elementen, alle ausblenden und state setzen
     if (stateBirth == 0){
         var elements = document.getElementsByClassName("birth");
         for(var i = 0; i != elements.length; ++i)
@@ -15,6 +17,7 @@ function ausblendenBirth() {
         }
         stateBirth = 1;
     }
+    //einblenden: suchen nach Elementen, alle einblenden und state setzen
     else {
         var elements = document.getElementsByClassName("birth");
         for(var i = 0; i != elements.length; ++i)
@@ -26,6 +29,7 @@ function ausblendenBirth() {
     }
 }
 function ausblendenPhone() {
+    //ausblenden: suchen nach Elementen, alle ausblenden und state setzen
     if (statePhone == 0){
         var elements = document.getElementsByClassName("phones");
         for(var i = 0; i != elements.length; ++i)
@@ -35,6 +39,7 @@ function ausblendenPhone() {
         }
         statePhone = 1;
     }
+    //einblenden: suchen nach Elementen, alle einblenden und state setzen
     else {
         var elements = document.getElementsByClassName("phones");
         for(var i = 0; i != elements.length; ++i)
@@ -46,6 +51,7 @@ function ausblendenPhone() {
     }
 }
 function ausblendenChild() {
+    //ausblenden: suchen nach Elementen, alle ausblenden und state setzen
     if (stateChild == 0){
         var elements = document.getElementsByClassName("childs");
         for(var i = 0; i != elements.length; ++i)
@@ -55,6 +61,7 @@ function ausblendenChild() {
         }
         stateChild = 1;
     }
+    //einblenden: suchen nach Elementen, alle einblenden und state setzen
     else {
         var elements = document.getElementsByClassName("childs");
         for(var i = 0; i != elements.length; ++i)
@@ -66,6 +73,7 @@ function ausblendenChild() {
     }
 }
 function ausblendenElec() {
+    //ausblenden: suchen nach Elementen, alle ausblenden und state setzen
     if (stateElec == 0){
         var elements = document.getElementsByClassName("electric");
         for(var i = 0; i != elements.length; ++i)
@@ -75,6 +83,7 @@ function ausblendenElec() {
         }
         stateElec = 1;
     }
+    //einblenden: suchen nach Elementen, alle einblenden und state setzen
     else {
         var elements = document.getElementsByClassName("electric");
         for(var i = 0; i != elements.length; ++i)
@@ -86,6 +95,7 @@ function ausblendenElec() {
     }
 }
 function ausblendenInternet() {
+    //ausblenden: suchen nach Elementen, alle ausblenden und state setzen
     if (stateInternet == 0){
         var elements = document.getElementsByClassName("internet");
         for(var i = 0; i != elements.length; ++i)
@@ -95,6 +105,7 @@ function ausblendenInternet() {
         }
         stateInternet = 1;
     }
+    //einblenden: suchen nach Elementen, alle einblenden und state setzen
     else {
         var elements = document.getElementsByClassName("internet");
         for(var i = 0; i != elements.length; ++i)
@@ -108,12 +119,14 @@ function ausblendenInternet() {
 //Sortierfunktion nach Vorbild der W3School
 function sortUp(n) {
     var table, rows, switching, i, x, y, shouldSwitch, switchcount = 0;
-
+    //Tabelle suchen
     table = document.getElementById("table");
     switching = true;
+    //Schleife für Sortiervorgang
     while (switching){
         switching = false;
         rows = table.rows;
+        //durch Zeilen gehen und prüfen ob richtig sortiert, wenn nicht shouldSwitch setzen und Schleife beenden
         for (i = 1; i < (rows.length - 1); i++){
             shouldSwitch = false;
             x = rows[i].getElementsByTagName("td")[n];
@@ -123,26 +136,25 @@ function sortUp(n) {
                 break;
             }
         }
+        //tauschen der zwei Spalten und switching setzen, da Sortiervorgang noch nicht beendet ist
         if (shouldSwitch) {
             rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
             switching = true;
             switchcount ++;
-        } else {
-            if (switchcount == 0) {
-                switching = true;
-            }
         }
     }
 }
 
 function sortDown(n) {
     var table, rows, switching, i, x, y, shouldSwitch, switchcount = 0;
-
+    //Tabelle suchen
     table = document.getElementById("table");
     switching = true;
+    //Schleife für Sortiervorgang
     while (switching){
         switching = false;
         rows = table.rows;
+        //durch Zeilen gehen und prüfen ob richtig sortiert, wenn nicht shouldSwitch setzen und Schleife beenden
         for (i = 1; i < (rows.length - 1); i++){
             shouldSwitch = false;
             x = rows[i].getElementsByTagName("td")[n];
@@ -152,14 +164,11 @@ function sortDown(n) {
                 break;
             }
         }
+        //tauschen der zwei Spalten und switching setzen, da Sortiervorgang noch nicht beendet ist
         if (shouldSwitch) {
             rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
             switching = true;
             switchcount ++;
-        } else {
-            if (switchcount == 0) {
-                switching = true;
-            }
         }
     }
 }
