@@ -63,7 +63,21 @@ class WorldDataParser{
         return $antwort;
     }
 
-    function printXML(){
+    function printXML($pfadXML,$pfadXSL){
+        // Load the XML source
+        $xml = new DOMDocument;
+        $xml->load($pfadXML);
+
+        $xsl = new DOMDocument;
+        $xsl->load($pfadXSL);
+
+        // Configure the transformer
+        $proc = new XSLTProcessor;
+        $proc->importStyleSheet($xsl); // attach the xsl rules
+
+        $newDoc = $proc->transformToDoc($xml);
+        echo $newDoc->saveHTML();;
+
 
     }
 
